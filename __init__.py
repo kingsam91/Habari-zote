@@ -1,5 +1,7 @@
 from flask import Flask
+from flask_bootstrap import Bootstrap
 from config import config_options
+from app import error
 
 # Initializing application
 def create_app(config_name):
@@ -10,7 +12,11 @@ def create_app(config_name):
     config_options[config_name].init_app(app)
 
     # Initializing Flask Extensions
-    # Bootstrap(app)
+    Bootstrap(app)
+
+    from .home import home as home_blueprint
+    app.register_blueprint(home_blueprint)
+
 
 
     return app
