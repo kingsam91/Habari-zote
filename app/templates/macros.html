@@ -1,0 +1,13 @@
+{% macro displayNews(mylist) %}
+
+{% for new, url, i in mylist %}
+<a href="">
+    <div class="col-lg-2 img-container">
+        <img src="{{i}}" alt="">
+        <h3>News: </h3> {{new}}
+        <h4>Description: </h4> {{des}}
+    </div>
+</a>
+{% endfor %}
+
+{% endmacro %}
