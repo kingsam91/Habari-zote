@@ -55,5 +55,24 @@ def get_news_by_custom_source(source):
 
 
 def get_sources():
+       '''
+    Function that gets the json responce to our url request
+    '''
+    getSources = newsapi.get_sources()
+    sources = getSources['sources']
+
+    id = []
+    name = []
+    category = []
+
+    for i in range(len(sources)):
+        mysources = sources[i]
+
+        id.append(mysources['id'])
+        name.append(mysources['name'])
+        category.append(mysources['category'])
+
+    sources_results = zip(id, name, category)
+
 
     return sources_results
