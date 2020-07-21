@@ -1,8 +1,6 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 from config import config_options
-from . import error
-# from flask import Blueprint
 
 def create_app(config_name):
     app = Flask(__name__)
@@ -15,5 +13,9 @@ def create_app(config_name):
 
     from .home import home as home_blueprint
     app.register_blueprint(home_blueprint)
+
+    @app.errorhandler(404)
+    def _handle_api_error(ex):
+        return render_template('errors/404.html')
 
     return app

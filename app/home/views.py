@@ -2,7 +2,6 @@ from flask import render_template, request
 from ..requests import get_news, get_sources, get_news_by_custom_source
 from . import home
 
-
 @home.route('/')
 def index():
 

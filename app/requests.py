@@ -29,7 +29,7 @@ def get_news():
 
 
 def get_news_by_custom_source(source):
-'''
+    '''
     Function that gets the json responce to our url request
     '''
     topheadlines = newsapi.get_top_headlines(
@@ -55,7 +55,7 @@ def get_news_by_custom_source(source):
 
 
 def get_sources():
-       '''
+    '''
     Function that gets the json responce to our url request
     '''
     getSources = newsapi.get_sources()
