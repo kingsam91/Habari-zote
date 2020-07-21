@@ -1,16 +1,16 @@
-# NEWS API
+# HABARI ZOTE
 
-News Api is a python based programme that allows a user to catch-up on news that were trending(Top Headlines) from all sources and also user can customize search to his or her most trusted sources.
+Habari zote is a python based programme that allows a user to catch-up on news that were trending(Top Headlines) from all sources and also user can customize search to his or her most trusted sources.
 
 
 ## Installation
 
-News Api can be loaded onto a webpage and user can comfortably interact with the buitifuly laid out UI. It is easy to use for any literate user.
+Habari zote can be loaded onto a webpage and user can comfortably interact with the buitifuly laid out UI. It is easy to use for any literate user.
 
 
 ## How To Run
 
-News Api being python based, one runs in terminal 
+Habari zote being python based, one runs in terminal 
 ```bash
 python run.py
 ```
