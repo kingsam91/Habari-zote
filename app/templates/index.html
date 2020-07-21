@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+
+{% block content %}
+
+<div class="container">
+    <form action="/search-source" method="post">
+        <div class="form-group">
+            <select name="search" id="search" class="form-control">
+                <option value="1">Select News Source</option>
+                {% for id, name,category in mysources %}
+                <option {% if id == source %} selected="selected" {% endif %} value="{{id}}">{{name}}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="row">
+        {{ macro.displayNews(mylist)}}
+    </div>
+</div>
+
+{% endblock%}
